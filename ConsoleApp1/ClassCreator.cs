@@ -32,6 +32,10 @@ namespace _22ISbo3b
         {
             return Сотрудник.Create();
         }
+        public static Смена Смена1()
+        {
+            return Смена.Create();
+        }
     }
 }
 
