@@ -16,6 +16,13 @@ namespace ConsoleApp1
             Console.WriteLine($"Para.Время начала перерыва = {para.BreakStartTime}");
             Console.WriteLine($"Para.Время окончания перерыва = {para.BreakEndTime}");
         }
+        public static void Print(ClassPara7 classPara)
+        {
+            Console.WriteLine($"ClassPara.BreakStartTime={classPara.BreakStartTime}");
+            Console.WriteLine($"ClassPara.BreakEndTime={classPara.BreakEndTime}");
+            Console.WriteLine($"ClassPara.EndTime={classPara.EndTime}");
+            Console.WriteLine($"ClassPara.StartTime={classPara.StartTime}");
+        }
         public static void Print(Lesson lesson)
         {
             Console.WriteLine($"Дата проведения занятия = {lesson.Date}");
