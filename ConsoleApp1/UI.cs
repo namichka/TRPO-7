@@ -65,7 +65,10 @@ namespace ConsoleApp1
             Print(employee.Position);
         }
 
-        
-        
+        public static void Print(Smena Smena)
+        {
+            Console.WriteLine($"Smena.Введите смену:  = {Smena.Name}");
+        }
+
     }
 }

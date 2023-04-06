@@ -10,24 +10,6 @@ namespace ConsoleApp1
 {
     static class ClassCreator
     {
-        public static ClassA ClassA()
-        {
-            Console.Write("Введите имя: ");
-            string name = Console.ReadLine();
-            Console.Write("Введите второе имя: ");
-            string lastName = Console.ReadLine();
-            return new ClassA(name, lastName);
-        }
-
-        public static ClassB ClassB()
-        {
-            return new ClassB(ClassA(), ClassC());
-        }
-
-        public static ClassC ClassC()
-        {
-            return new ClassC();
-        }
         public static Para Para()
         {
             Console.Write("Укажите время начала пары: ");
@@ -38,9 +20,8 @@ namespace ConsoleApp1
             string BreakStartTime = Console.ReadLine();
             Console.Write("Укажите время окончания перерыва: ");
             string BreakEndTime = Console.ReadLine();
-            Smena smena = new Smena();
 
-            return new Para(TheStartTimeOfThePair, TheEndTimeOfThePair, BreakStartTime, BreakEndTime, smena);
+            return new Para(TheStartTimeOfThePair, TheEndTimeOfThePair, BreakStartTime, BreakEndTime, Smena());
         }
         public static Lesson Lesson()
         {
@@ -100,21 +81,21 @@ namespace ConsoleApp1
             string patronymic = Console.ReadLine();
             return new Employee(surnname, name, patronymic, Class10());
         }
-        public static Class6 Class6()
+        public static Speciality Speciality()
         {
             Console.WriteLine("Введите название специальности");
             string named = Console.ReadLine();
             Console.WriteLine("Введите сокращение");
             string reduction = Console.ReadLine();
-            return new Class6(named, reduction);
+            return new Speciality(named, reduction);
         }
 
 
-        public static Class8 Smena()
+        public static Smena Smena()
         {
             Console.WriteLine("Введите название смены: ");
             string name = Console.ReadLine();
-            return new Class8(name);
+            return new Smena(name);
         }
 
         public static Class10 Class10()
@@ -169,7 +150,7 @@ namespace ConsoleApp1
             {
                 yearOfAdmission = DateTime.Now.Year;
             }
-            return new Group(name, abbreviation, number, yearOfAdmission, Class6(), Employee());
+            return new Group(name, abbreviation, number, yearOfAdmission, Speciality(), Employee());
 
 
         }
