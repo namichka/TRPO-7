@@ -49,6 +49,10 @@ namespace ConsoleApp1
             return new Lesson(date, Discipline(), Employee(), Auditoria(), Group(), Para(), Class14());
 
         }
+        public static ClassPara7 ClassPara7()
+        {
+            return new ClassPara7(DateTime.Now, DateTime.Now, DateTime.Now, DateTime.Now, new Shift());
+        }
 
         public static Auditoria Auditoria()
         {
