@@ -60,15 +60,15 @@ namespace ConsoleApp1
 
         public static Student Student()
         {
+            Console.Write("Введите фамилию студента: ");
+            string lastName = Console.ReadLine();
             Console.Write("Введите имя студента: ");
             string name = Console.ReadLine();
-            Console.Write("Введите фамилию студента: ");
-            string surname = Console.ReadLine();
             Console.Write("Введите отчество студента: ");
-            string middlename = Console.ReadLine();
+            string surName = Console.ReadLine();
             Console.Write("Введите дату рождения студента: ");
-            int dateOfBirth = int.Parse( Console.ReadLine());
-            return new Student(name, surname, middlename, dateOfBirth, Group());
+            DateTime dateOfBirth = DateTime.Parse(Console.ReadLine());
+            return new Student(lastName, name, surName, Group(), dateOfBirth);
         }
 
         public static Employee Employee()
