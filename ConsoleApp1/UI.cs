@@ -72,5 +72,13 @@ namespace ConsoleApp1
             Console.WriteLine($"Smena.Введите смену:  = {Smena.Name}");
         }
 
+        public static void Print(Student student)
+        {
+            Console.WriteLine($"Фамилия студента : {student.lastName}");
+            Console.WriteLine($"Имя студента : {student.name}");
+            Console.WriteLine($"Отчество студента : {student.surname}");
+            Print(student.group);
+            Console.WriteLine($"Дата рождения студента : {student.dateOfBirth}");
+        }
     }
 }
