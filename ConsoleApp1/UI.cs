@@ -62,6 +62,11 @@ namespace ConsoleApp1
         {
             Console.WriteLine($"Smena.Введите смену:  = {Smena.Name}");
         }
-
+        public static void Print(Division division)
+        {
+            Console.WriteLine($"Class11.Имя = {division.Name}");
+            Print(division.Director);
+            Print(division.Organization);
+        }
     }
 }

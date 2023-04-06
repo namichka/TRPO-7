@@ -16,6 +16,7 @@ namespace ConsoleApp1
                 switch (Console.ReadLine())
                 {
                     case "Пара": UI.Print(ClassCreator.Para()); break;
+                    case "Подразделение": UI.Print(ClassCreator.Division()); break;
                     case "Дисциплина": UI.Print(ClassCreator.Discipline()); break;
                     case "Сотрудник": UI.Print(ClassCreator.Employee()); break;
                     case "Аудитория": UI.Print(ClassCreator.Auditoria()); break;
