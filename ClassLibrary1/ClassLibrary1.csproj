@@ -42,9 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Position.cs" />
-    <Compile Include="Smena.cs" />
-    <Compile Include="Speciality.cs" />
+    <Compile Include="ClassPara7.cs" />
     <Compile Include="Discipline.cs" />
     <Compile Include="Lesson.cs" />
     <Compile Include="Employee.cs" />
