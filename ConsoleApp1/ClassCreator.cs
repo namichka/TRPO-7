@@ -10,6 +10,18 @@ namespace ConsoleApp1
 {
     static class ClassCreator
     {
+        public static Organization Organization()
+        {
+            Console.WriteLine("Укажите название организации");
+            string name = Console.ReadLine();
+            Console.WriteLine("Укажите юридический адрес организации");
+            string legal_address = Console.ReadLine();
+            Console.WriteLine("Укажите фактический адрес организации");
+            string actual_address = Console.ReadLine();
+
+
+            return new Organization(name, legal_address, actual_address, Employee());
+        }
         public static Para Para()
         {
             Console.Write("Укажите время начала пары: ");
