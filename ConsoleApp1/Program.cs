@@ -1,7 +1,12 @@
-﻿using _22ISbo3b;
-namespace _22ISbo3b
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
 {
-    class Programm
+    class Program
     {
         static void Main(string[] args)
         {
@@ -10,14 +15,17 @@ namespace _22ISbo3b
                 Console.Write("Какой класс Вы хотите создать: ");
                 switch (Console.ReadLine())
                 {
-                    case "Аудитория": Console.WriteLine(ClassCreator.Аудитория1().ToString()); break;
-                    case "Вид занятия": Console.WriteLine(ClassCreator.Вид_Занятия1().ToString()); break;
-                    case "Группа": Console.WriteLine(ClassCreator.Группа1().ToString()); break;
-                    case "Дисциплина": Console.WriteLine(ClassCreator.Дисциплина1().ToString()); break;
-                    case "Занятие": Console.WriteLine(ClassCreator.Занятие1().ToString()); break;
-                    case "Пара": Console.WriteLine(ClassCreator.Пара1().ToString()); break;
-                    case "Сотрудник": Console.WriteLine(ClassCreator.Сотрудник1().ToString()); break;
-                    case "Смена": Console.WriteLine(ClassCreator.Смена1().ToString()); break;
+                    case "Пара": UI.Print(ClassCreator.Para()); break;
+                    case "Подразделение": UI.Print(ClassCreator.Division()); break;
+                    case "Должность": UI.Print(ClassCreator.Class10()); break;
+                    case "Дисциплина": UI.Print(ClassCreator.Discipline()); break;
+                    case "Студент": UI.Print(ClassCreator.Student());break;
+                    case "Смена": UI.Print(ClassCreator.Smena());break;
+                    case "Сотрудник": UI.Print(ClassCreator.Employee()); break;
+                    case "Аудитория": UI.Print(ClassCreator.Auditoria()); break;
+                    case "Занятие": UI.Print(ClassCreator.Lesson()); break;
+                    case "Специальность": UI.Print(ClassCreator.Class6()); break;
+                    case "Группа": UI.Print(ClassCreator.Group()); break;
                     default: Console.WriteLine("Такой класс не реализован"); break;
                 }
             }
