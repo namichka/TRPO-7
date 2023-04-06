@@ -16,6 +16,15 @@ namespace ConsoleApp1
             Console.WriteLine($"Para.Время начала перерыва = {para.BreakStartTime}");
             Console.WriteLine($"Para.Время окончания перерыва = {para.BreakEndTime}");
         }
+
+        public static void Print(Organization org)
+        {
+            Console.WriteLine($"Organization. Название организации = {org.Name}");
+            Console.WriteLine($"Organization. Юридический адрес организации = {org.LegalAddress}");
+            Console.WriteLine($"Organization. Фактический адрес организации = {org.ActualAddress}");
+            Print(org.Supervisor);
+
+        }
         public static void Print(Lesson lesson)
         {
             Console.WriteLine($"Дата проведения занятия = {lesson.Date}");
