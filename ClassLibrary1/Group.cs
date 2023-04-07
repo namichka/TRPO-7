@@ -9,7 +9,6 @@ namespace ClassLibrary1
 
         public class Group
         {
-            //group
             public string Name { get; }
             public string Abbreviation { get; }
             public int Number { get; }

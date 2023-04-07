@@ -55,9 +55,6 @@
     <Compile Include="Class6.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Student.cs" />
-    <Compile Include="ClassA.cs" />
-    <Compile Include="ClassB.cs" />
-    <Compile Include="ClassC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Smena.cs" />
     <Compile Include="Para.cs" />
