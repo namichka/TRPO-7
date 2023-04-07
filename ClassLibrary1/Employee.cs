@@ -12,9 +12,9 @@ namespace ClassLibrary1
         public string Name { get; }
         public string Patronymic { get; }
 
-        public Position Position { get; }
+        public Class10 Position { get; }
 
-        public Employee(string surname, string name, string patronymic, Position position) 
+        public Employee(string surname, string name, string patronymic, Class10 position) 
         {
             Surname= surname;
             Name= name;

@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    
-    public class Class3
+    public class ClassA
     {
-        
         public string Name { get; }
-        public string ShortName { get; }
-        public Class3(string name, string shortName)
+        public string LastName { get; }
+
+        public ClassA(string name, string lastName)
         {
             Name = name;
-            ShortName = shortName;
+            LastName = lastName;
         }
     }
 }

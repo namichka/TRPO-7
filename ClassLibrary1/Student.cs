@@ -8,18 +8,19 @@ namespace ClassLibrary1
 {
     public class Student
     {
-        public string lastName { get;  }
-        public string name { get;  }
-        public string surname { get;  }
-        public Group group { get;  }
-        public DateTime dateOfBirth { get; }
-        public Student (string lastName, string name, string surname, Group group, DateTime dateOfBirth)
+        public string Surname { get; }
+        public string Name { get; }
+        public string Middlename { get; }
+        public int DateOfBirth { get; }
+        public Group Group{ get; }
+
+        public Student(string surname, string name, string middlename, int dateOfBirth, Group group)
         {
-            this.lastName = lastName; // нужно ли this.
-            this.name = name;
-            this.surname = surname;
-            this.group = group;
-            this.dateOfBirth = dateOfBirth;                
+            Surname = surname;
+            Name = name;
+            Middlename = middlename;
+            DateOfBirth = dateOfBirth;
+            Group = group;
         }
     }
 }
