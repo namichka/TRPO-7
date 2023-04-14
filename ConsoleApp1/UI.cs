@@ -59,15 +59,15 @@ namespace ConsoleApp1
             Console.WriteLine($"Student Дата Рождения Студента = {student.DateOfBirth}");
             Print(student.Group);
         }
-        public static void Print(Class6 class6)
+        public static void Print(Speciality speciality)
         {
-            Console.WriteLine($"Class6.Введите название специальности = {class6.Named}");
-            Console.WriteLine($"Class6.Введите сокращение = {class6.Reduction}");
+            Console.WriteLine($"Class6.Введите название специальности = {speciality.Name}");
+            Console.WriteLine($"Class6.Введите сокращение = {speciality.Reduction}");
         }
 
-        public static void Print(Class8 Smena)
+        public static void Print(Smena smena)
         {
-            Console.WriteLine($"Class6.Введите смену:  = {Smena.Named}");
+            Console.WriteLine($"Class6.Введите смену:  = {smena.Name}");
         }
 
         public static void Print(Employee employee)
@@ -78,11 +78,11 @@ namespace ConsoleApp1
             Print(employee.Position);
         }
 
-        public static void Print(Class10 class10)
+        public static void Print(Jobtitle jobtitle)
         {
-            Console.WriteLine($"Class10.Имя = {class10.Name}");
-            Console.WriteLine($"Class10.Оклад = {class10.Salary}");
-            Print(class10.Division);
+            Console.WriteLine($"Class10.Имя = {jobtitle.Name}");
+            Console.WriteLine($"Class10.Оклад = {jobtitle.Salary}");
+            Print(jobtitle.Division);
 
         }
 
@@ -93,18 +93,18 @@ namespace ConsoleApp1
             Print(division.Organization);
         }
 
-        public static void Print(Class12 class12)
+        public static void Print(Organization organization)
         {
             
             
         }
 
-        public static void Print(Class14 class14)
+        public static void Print(VidZanyatia vidZanyatia)
         {
 
         }
 
-        public static void Print(Class15 class15)
+        public static void Print(Oborydovanie oborydovanie)
         {
 
         }

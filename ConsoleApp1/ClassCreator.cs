@@ -20,15 +20,13 @@ namespace ConsoleApp1
             string BreakStartTime = Console.ReadLine();
             Console.Write("Укажите время окончания перерыва: ");
             string BreakEndTime = Console.ReadLine();
-            Smena smena = new Smena();
-
-            return new Para(TheStartTimeOfThePair, TheEndTimeOfThePair, BreakStartTime, BreakEndTime, smena);
+            return new Para(TheStartTimeOfThePair, TheEndTimeOfThePair, BreakStartTime, BreakEndTime, Smena());
         }
         public static Lesson Lesson()
         {
             Console.Write("Введите дату проведения: ");
             string date = Console.ReadLine();
-            return new Lesson(date, Discipline(), Employee(), Auditoria(), Group(), Para(), Class14());
+            return new Lesson(date, Discipline(), Employee(), Auditoria(), Group(), Para(), VidZanyatia());
 
         }
 
@@ -76,32 +74,32 @@ namespace ConsoleApp1
             string name = Console.ReadLine();
             Console.Write("Введите Отчество: ");
             string patronymic = Console.ReadLine();
-            return new Employee(surnname, name, patronymic, Class10());
+            return new Employee(surnname, name, patronymic, Jobtitle());
         }
-        public static Class6 Class6()
+        public static Speciality Speciality()
         {
             Console.WriteLine("Введите название специальности");
             string named = Console.ReadLine();
             Console.WriteLine("Введите сокращение");
             string reduction = Console.ReadLine();
-            return new Class6(named, reduction);
+            return new Speciality(named, reduction);
         }
 
 
-        public static Class8 Smena()
+        public static Smena Smena()
         {
             Console.WriteLine("Введите название смены: ");
             string name = Console.ReadLine();
-            return new Class8(name);
+            return new Smena(name);
         }
 
-        public static Class10 Class10()
+        public static Jobtitle Jobtitle()
         {
             Console.Write("Введите название: ");
             string name = Console.ReadLine();
             Console.Write("Введите оклад: ");
             string salary = Console.ReadLine();
-            return new Class10(name, salary, Division());
+            return new Jobtitle(name, salary, Division());
         }
 
         public static Division Division()
@@ -110,23 +108,23 @@ namespace ConsoleApp1
             string name = Console.ReadLine();  
 
 
-            return new Division(name, Employee(), Class12());
+            return new Division(name, Employee(), Organization());
         }
 
-        public static Class12 Class12()
+        public static Organization Organization()
         {
-            return new Class12();
+            return new Organization();
 
         }
 
-        public static Class14 Class14()
+        public static VidZanyatia VidZanyatia()
         {
-            return new Class14();
+            return new VidZanyatia();
         }
 
-        public static Class15 Class15()
+        public static Oborydovanie Class15()
         {
-            return new Class15();
+            return new Oborydovanie();
         }
 
         public static Group Group()
@@ -147,7 +145,7 @@ namespace ConsoleApp1
             {
                 yearOfAdmission = DateTime.Now.Year;
             }
-            return new Group(name, abbreviation, number, yearOfAdmission, Class6(), Employee());
+            return new Group(name, abbreviation, number, yearOfAdmission, Speciality(), Employee());
 
 
         }

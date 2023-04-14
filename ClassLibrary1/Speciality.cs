@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Class6
+    public class Speciality
     {
-        public string Named { get; }
+        public string Name { get; }
         public string Reduction { get; }
-        public Class6(string named, string reduction)
+        public Speciality(string name, string reduction)
         {
-            Named = named;
+            Name = name;
             Reduction = reduction;
         }
     }

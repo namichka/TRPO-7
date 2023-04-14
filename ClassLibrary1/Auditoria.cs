@@ -12,9 +12,9 @@ namespace ClassLibrary1
         public Employee Employee { get; }
         public string NumberMest { get; }
         public string NumberOkon { get; }
-        public Class15 Oborydovanie { get; }
+        public Oborydovanie Oborydovanie { get; }
 
-        public Auditoria(string name, Employee employee, string numbermest, string numberokon, Class15 oborydovanie)
+        public Auditoria(string name, Employee employee, string numbermest, string numberokon, Oborydovanie oborydovanie)
         {
             Name = name;
             Employee = employee;

@@ -14,9 +14,9 @@ namespace ClassLibrary1
         public Auditoria Auditoria { get; }
         public Group Group { get; }
         public Para Para { get; }
-        public Class14 VidZanyatia { get; }
+        public VidZanyatia VidZanyatia { get; }
 
-        public Lesson(string date, Discipline disciplina, Employee sotrudnik, Auditoria auditoria, Group group, Para para, Class14 vidzanyatia)
+        public Lesson(string date, Discipline disciplina, Employee sotrudnik, Auditoria auditoria, Group group, Para para, VidZanyatia vidzanyatia)
         {
             Date = date;
             Disciplina = disciplina;

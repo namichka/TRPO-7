@@ -17,14 +17,14 @@ namespace ConsoleApp1
                 {
                     case "Пара": UI.Print(ClassCreator.Para()); break;
                     case "Подразделение": UI.Print(ClassCreator.Division()); break;
-                    case "Должность": UI.Print(ClassCreator.Class10()); break;
+                    case "Должность": UI.Print(ClassCreator.Jobtitle()); break;
                     case "Дисциплина": UI.Print(ClassCreator.Discipline()); break;
                     case "Студент": UI.Print(ClassCreator.Student());break;
                     case "Смена": UI.Print(ClassCreator.Smena());break;
                     case "Сотрудник": UI.Print(ClassCreator.Employee()); break;
                     case "Аудитория": UI.Print(ClassCreator.Auditoria()); break;
                     case "Занятие": UI.Print(ClassCreator.Lesson()); break;
-                    case "Специальность": UI.Print(ClassCreator.Class6()); break;
+                    case "Специальность": UI.Print(ClassCreator.Speciality()); break;
                     case "Группа": UI.Print(ClassCreator.Group()); break;
                     default: Console.WriteLine("Такой класс не реализован"); break;
                 }

@@ -10,10 +10,10 @@ namespace ClassLibrary1
     {
         public string Name { get; }
         public Employee Director { get; }
-        public Class12 Organization { get; }
+        public Organization Organization { get; }
 
 
-        public Division(string name, Employee director, Class12 organization)
+        public Division(string name, Employee director, Organization organization)
         {
             Name = name;
             Director = director;
