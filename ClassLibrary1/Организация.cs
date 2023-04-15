@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Smena
+    public class Организация
     {
-        public string Name { get; }
-        public Smena(string name)
-        {
-            Name = name;
-        }
+
     }
 }
