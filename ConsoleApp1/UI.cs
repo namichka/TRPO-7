@@ -9,102 +9,103 @@ namespace ConsoleApp1
 {
     static class UI
     {
-        public static void Print(Para para)
+        public static void Print(Пара пара)
         {
-            Console.WriteLine($"Para.Время начала пары = {para.TheStartTimeOfThePair}");
-            Console.WriteLine($"Para.Время окончания пары = {para.TheEndTimeOfThePair}");
-            Console.WriteLine($"Para.Время начала перерыва = {para.BreakStartTime}");
-            Console.WriteLine($"Para.Время окончания перерыва = {para.BreakEndTime}");
+            Console.WriteLine($"Время начала пары = {пара.НачалоПары}");
+            Console.WriteLine($"Время окончания пары = {пара.КонецПары}");
+            Console.WriteLine($"Время начала перерыва = {пара.НачалоПерерыва}");
+            Console.WriteLine($"Время окончания перерыва = {пара.КонецПерерыва}");
+            Print(пара.Смена);
         }
-        public static void Print(Lesson lesson)
+        public static void Print(Занятие занятие)
         {
-            Console.WriteLine($"Дата проведения занятия = {lesson.Date}");
-            Print(lesson.Disciplina);
-            Print(lesson.Sotrudnik);
-            Print(lesson.Auditoria);
-            Print(lesson.Group);
-            Print(lesson.Para);
-            Print(lesson.VidZanyatia);
+            Console.WriteLine($"Дата проведения занятия = {занятие.Дата}");
+            Print(занятие.Дисциплина);
+            Print(занятие.Сотрудник);
+            Print(занятие.Аудитория);
+            Print(занятие.Группа);
+            Print(занятие.Пара);
+            Print(занятие.ВидЗанятия);
         }
-        public static void Print(Auditoria Auditoria)
+        public static void Print(Аудитория аудитория)
         {
-            Console.WriteLine($"Auditoria.Название = {Auditoria.Name}");
-            Print(Auditoria.Employee);
-            Console.WriteLine($"Auditoria.Количество мест = {Auditoria.NumberMest}");
-            Console.WriteLine($"Auditoria.Количество окон = {Auditoria.NumberOkon}");
-            Print(Auditoria.Oborydovanie);
-        }
-
-        public static void Print(Discipline discipline)
-        {
-            Console.WriteLine($"Название дисциплины: {discipline.Name}");
-            Console.WriteLine($"Сокращение дисциплины: {discipline.ShortName}");
+            Console.WriteLine($"Название аудитория = {аудитория.Название}");
+            Print(аудитория.Сотрудник);
+            Console.WriteLine($"Количество мест = {аудитория.КолвоМест}");
+            Console.WriteLine($"Количество окон = {аудитория.КолвоОкон}");
+            Print(аудитория.Оборудование);
         }
 
-        public static void Print(Group group)
+        public static void Print(Дисциплина дисциплина)
         {
-            Console.WriteLine($"Group.Название = {group.Name}");
-            Console.WriteLine($"Group.Сокращение = {group.Abbreviation}");
-            Console.WriteLine($"Group.Численность = {group.Number}");
-            Console.WriteLine($"Group.ГодПоступления = {group.YearOfAdmission}");
-            Print(group.HomeroomTeacher);
-            Print(group.Speciality);
+            Console.WriteLine($"Название дисциплины: {дисциплина.Название}");
+            Console.WriteLine($"Сокращение дисциплины: {дисциплина.Сокращение}");
         }
 
-        public static void Print(Student student)
+        public static void Print(Группа группа)
         {
-            Console.WriteLine($"Student Фамилия Студента = {student.Surname}");
-            Console.WriteLine($"Student Имя Студента = {student.Name}");
-            Console.WriteLine($"Student Отчество Студента = {student.Middlename}");
-            Console.WriteLine($"Student Дата Рождения Студента = {student.DateOfBirth}");
-            Print(student.Group);
-        }
-        public static void Print(Class6 class6)
-        {
-            Console.WriteLine($"Class6.Введите название специальности = {class6.Named}");
-            Console.WriteLine($"Class6.Введите сокращение = {class6.Reduction}");
+            Console.WriteLine($"Название группы = {группа.Название}");
+            Console.WriteLine($"Сокращение = {группа.Сокращение}");
+            Console.WriteLine($"Численность = {группа.Численность}");
+            Console.WriteLine($"ГодПоступления = {группа.ГодПоступления}");
+            Print(группа.Сотрудник);
+            Print(группа.Специальность);
         }
 
-        public static void Print(Class8 Smena)
+        public static void Print(Студент студент)
         {
-            Console.WriteLine($"Class6.Введите смену:  = {Smena.Named}");
+            Console.WriteLine($"Фамилия студента = {студент.Фамилия}");
+            Console.WriteLine($"Имя студента = {студент.Имя}");
+            Console.WriteLine($"Отчество студента = {студент.Отчество}");
+            Console.WriteLine($"Дата рождения студента = {студент.ДатаРождения}");
+            Print(студент.Группа);
+        }
+        public static void Print(Специальность специальность)
+        {
+            Console.WriteLine($"Название специальности: {специальность.Название}");
+            Console.WriteLine($"Сокращение: {специальность.Сокращение}");
         }
 
-        public static void Print(Employee employee)
+        public static void Print(Смена смена)
         {
-            Console.WriteLine($"Фамилия сотрудника : {employee.Surname}");
-            Console.WriteLine($"Имя сотрудника : {employee.Name}");
-            Console.WriteLine($"Отчество сотрудника : {employee.Patronymic}");
-            Print(employee.Position);
+            Console.WriteLine($"Название смены: {смена.Название}");
         }
 
-        public static void Print(Class10 class10)
+        public static void Print(Сотрудник сотрудник)
         {
-            Console.WriteLine($"Class10.Имя = {class10.Name}");
-            Console.WriteLine($"Class10.Оклад = {class10.Salary}");
-            Print(class10.Division);
+            Console.WriteLine($"Фамилия сотрудника: {сотрудник.Фамилия}");
+            Console.WriteLine($"Имя сотрудника: {сотрудник.Имя}");
+            Console.WriteLine($"Отчество сотрудника: {сотрудник.Отчество}");
+            Print(сотрудник.Должность);
+        }
+
+        public static void Print(Должность должность)
+        {
+            Console.WriteLine($"Должность: {должность.Название}");
+            Console.WriteLine($"Оклад: {должность.Оклад}");
+            Print(должность.Подразделение);
 
         }
 
-        public static void Print(Division division)
+        public static void Print(Подразделение подразделение)
         {
-            Console.WriteLine($"Class11.Имя = {division.Name}");
-            Print(division.Director);
-            Print(division.Organization);
+            Console.WriteLine($"Название подразделения: {подразделение.Название}");
+            Print(подразделение.Сотрудник);
+            Print(подразделение.Организация);
         }
 
-        public static void Print(Class12 class12)
+        public static void Print(Организация организация)
         {
             
             
         }
 
-        public static void Print(Class14 class14)
+        public static void Print(ВидЗанятия видЗанятия)
         {
 
         }
 
-        public static void Print(Class15 class15)
+        public static void Print(Оборудование oborydovanie)
         {
 
         }
