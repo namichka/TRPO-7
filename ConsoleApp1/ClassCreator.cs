@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.SymbolStore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,9 +63,9 @@ namespace ConsoleApp1
 
         public static Студент Студент()
         {
+            DateTime датаРождения;
             byte день, месяц;
-            ushort год;
-            DateTime датаРождения = new DateTime();
+            ushort год;      
             Console.Write("Введите фамилию студента: ");
             string фамилия = Console.ReadLine();
             Console.Write("Введите имя студента: ");
@@ -81,6 +82,7 @@ namespace ConsoleApp1
                 Console.Write("Введите день рождения: ");
                 день = byte.Parse(Console.ReadLine());
                 датаРождения = new DateTime(год, месяц, день);
+                Console.WriteLine(датаРождения.ToString("dd.MM.yyyy"));
             }
             catch(Exception)
             {
@@ -92,9 +94,10 @@ namespace ConsoleApp1
 
             return new Студент(фамилия, имя, отчество, датаРождения, Группа());
         }
-
+        static bool isDa = false;
         public static Сотрудник Сотрудник()
         {
+            isDa = true;
             Console.Write("Введите фамилию сотрудника: ");
             string фамилия = Console.ReadLine();
             Console.Write("Введите имя сотрудника: ");
@@ -122,7 +125,7 @@ namespace ConsoleApp1
 
         public static Должность Должность()
         {
-            uint оклад = 0;
+            uint оклад;
             Console.Write("Введите название должности: ");
             string название = Console.ReadLine();
             Console.Write("Введите оклад: ");
@@ -140,11 +143,13 @@ namespace ConsoleApp1
 
         public static Подразделение Подразделение()
         {
+
             Console.Write("Введите название подразделения: ");
             string название = Console.ReadLine();
-
-
-            return new Подразделение(название, Сотрудник(), Организация());
+            if (!isDa)
+                return new Подразделение(название, Сотрудник(), Организация());
+            else
+                return new Подразделение(название);
         }
 
         public static Организация Организация()
@@ -182,7 +187,7 @@ namespace ConsoleApp1
                 return Группа();
             }
             Console.Write("Введите год поступления: ");
-            if(ushort.TryParse(Console.ReadLine(), out ushort result) && result > 1949 && result < DateTime.Now.Year)
+            if(ushort.TryParse(Console.ReadLine(), out ushort result) && result > 1949 && result <= DateTime.Now.Year)
             {
                 годПоступления = result;
             }

@@ -13,7 +13,6 @@ namespace ClassLibrary1
             public string Сокращение { get; }
             public byte Численность { get; }
             public ushort ГодПоступления { get; }
-
             public Специальность Специальность { get; }
             public Сотрудник Сотрудник { get; }
 
