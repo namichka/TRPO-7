@@ -9,12 +9,12 @@ namespace ClassLibrary1
 
     public class Группа
     {
-            public string Название { get; }
-            public string Сокращение { get; }
-            public byte Численность { get; }
-            public ushort ГодПоступления { get; }
-            public Специальность Специальность { get; }
-            public Сотрудник Сотрудник { get; }
+        public string Название { get; }
+        public string Сокращение { get; }
+        public byte Численность { get; }
+        public ushort ГодПоступления { get; }
+        public Специальность Специальность { get; }
+        public Сотрудник Сотрудник { get; }
 
         public Группа(string название, string сокращение, byte численность, ushort годПоступления, Специальность специальность, Сотрудник сотрудник)
         {
