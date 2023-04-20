@@ -68,7 +68,7 @@ namespace ConsoleApp1
 
         public static void Print(Смена смена)
         {
-            
+            Console.WriteLine($"Название смены: {смена.Название}");
         }
 
         public static void Print(Сотрудник сотрудник)
