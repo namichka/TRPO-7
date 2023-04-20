@@ -99,8 +99,10 @@ namespace ConsoleApp1
 
         public static void Print(Организация организация)
         {
-            
-            
+            Console.WriteLine($"Название организации = {организация.Название}");
+            Console.WriteLine($"Юридический адрес = {организация.ЮридическийАдрес}");
+            Console.WriteLine($"Фактический адрес = {организация.ФактическийАдрес}");
+            Print(организация.Сотрудник);
         }
 
         public static void Print(ВидЗанятия видЗанятия)
