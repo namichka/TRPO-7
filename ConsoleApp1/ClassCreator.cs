@@ -26,7 +26,8 @@ namespace ConsoleApp1
         public static Занятие Занятие()
         {
             Console.Write("Введите дату проведения: ");
-            DateTime дата = DateTime.Parse(Console.ReadLine());
+            DateTime дата = DateTime.Now;
+            DateTime.TryParse(Console.ReadLine(), out дата);
             return new Занятие(дата, Дисциплина(), Сотрудник(), Аудитория(), Группа(), Пара(), ВидЗанятия());
 
         }
