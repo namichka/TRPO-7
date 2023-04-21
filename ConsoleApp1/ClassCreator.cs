@@ -26,10 +26,10 @@ namespace ConsoleApp1
         public static Занятие Занятие()
         {
             Console.Write("Введите дату проведения: ");
-            DateTime дата = DateTime.Now;
-            DateTime.TryParse(Console.ReadLine(), out дата);
-            return new Занятие(дата, Дисциплина(), Сотрудник(), Аудитория(), Группа(), Пара(), ВидЗанятия());
-
+            if (DateTime.TryParse(Console.ReadLine(), out DateTime дата))
+                return new Занятие(дата, Дисциплина(), Сотрудник(), Аудитория(), Группа(), Пара(), ВидЗанятия());
+            else
+                return new Занятие(Дисциплина(), Сотрудник(), Аудитория(), Группа(), Пара(), ВидЗанятия());
         }
 
         public static Аудитория Аудитория()
