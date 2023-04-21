@@ -151,20 +151,22 @@ namespace ConsoleApp1
             if (!isDa)
                 return new Подразделение(название, Сотрудник(), Организация());
             else
-                return new Подразделение(название);
+                return new Подразделение(название, Организация());
         }
 
         public static Организация Организация()
         {
+            isDa = true;
             Console.Write("Введите название организации: ");
             string название = Console.ReadLine();
             Console.Write("Введите юридический адрес: ");
             string юридическийАдрес = Console.ReadLine();
             Console.Write("Введите фактический адрес: ");
             string фактическийАдрес = Console.ReadLine();
-            
+            if(!isDa)
              return new Организация(название, юридическийАдрес, фактическийАдрес, Сотрудник());
-          
+          else
+                return new Организация(название, юридическийАдрес, фактическийАдрес);
         }
 
         public static ВидЗанятия ВидЗанятия()
