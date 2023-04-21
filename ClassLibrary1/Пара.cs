@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,12 @@ namespace ClassLibrary1
 {
     public class Пара
     {
-        public string НачалоПары { get; }
-        public string КонецПары { get; }
-        public string НачалоПерерыва { get; }
-        public string КонецПерерыва { get; }
+        public TimeSpan НачалоПары { get; }
+        public TimeSpan КонецПары { get; }
+        public TimeSpan НачалоПерерыва { get; }
+        public TimeSpan КонецПерерыва { get; }
         public Смена Смена { get; }
-        public Пара(string началоПары, string конецПары, string началоПерерыва, string конецПерерыва, Смена смена)
+        public Пара(TimeSpan началоПары, TimeSpan конецПары, TimeSpan началоПерерыва, TimeSpan конецПерерыва, Смена смена)
         {
             НачалоПары = началоПары;
             КонецПары = конецПары;

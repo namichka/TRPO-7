@@ -14,19 +14,19 @@ namespace ConsoleApp1
         public static Пара Пара()
         {
             Console.Write("Укажите время начала пары: ");
-            string началоПары = Console.ReadLine();
+            TimeSpan началоПары = TimeSpan.Parse(Console.ReadLine());
             Console.Write("Укажите время окончания пары: ");
-            string конецПары = Console.ReadLine();
+            TimeSpan конецПары = TimeSpan.Parse(Console.ReadLine());
             Console.Write("Укажите время начала перерыва: ");
-            string началоПерерыва = Console.ReadLine();
+            TimeSpan началоПерерыва = TimeSpan.Parse(Console.ReadLine());
             Console.Write("Укажите время окончания перерыва: ");
-            string конецПерерыва = Console.ReadLine();
+            TimeSpan конецПерерыва = TimeSpan.Parse(Console.ReadLine());
             return new Пара(началоПары, конецПары, началоПерерыва, конецПерерыва, Смена());
         }
         public static Занятие Занятие()
         {
             Console.Write("Введите дату проведения: ");
-            string дата = Console.ReadLine();
+            DateTime дата = DateTime.Parse(Console.ReadLine());
             return new Занятие(дата, Дисциплина(), Сотрудник(), Аудитория(), Группа(), Пара(), ВидЗанятия());
 
         }
