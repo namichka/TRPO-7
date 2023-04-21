@@ -117,5 +117,12 @@ namespace ConsoleApp1
         {
 
         }
+        public static void Print(Корпус корпус)
+        {
+            Console.WriteLine($"Название корпуса: {корпус.Название}");
+            Console.WriteLine($"Адрес корпуса: {корпус.Адрес}");
+            Print(корпус.Сотрудник);
+            Print(корпус.Организация);
+        }
     }
 }

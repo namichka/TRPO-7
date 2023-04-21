@@ -208,7 +208,11 @@ namespace ConsoleApp1
         }
         public static Корпус Корпус()
         {
-            return new Корпус();
+            Console.Write("Введите название корпуса: ");
+            string название = Console.ReadLine();
+            Console.Write("Введите адрес: ");
+            string адрес = Console.ReadLine();
+            return new Корпус(название, адрес, Сотрудник(), Организация());
         }
     }
 }
