@@ -107,14 +107,6 @@ namespace ConsoleApp1
             string отчество = Console.ReadLine();
             return new Сотрудник(фамилия, имя, отчество, Должность());
         }
-        public static Специальность Специальность()
-        {
-            Console.WriteLine("Введите название специальности");
-            string название = Console.ReadLine();
-            Console.WriteLine("Введите сокращение");
-            string сокращение = Console.ReadLine();
-            return new Специальность(название, сокращение);
-        }
 
 
         public static Смена Смена()
@@ -178,7 +170,6 @@ namespace ConsoleApp1
         {
             return new Оборудование();
         }
-
         public static Группа Группа()
         {
             ushort годПоступления;
@@ -216,6 +207,14 @@ namespace ConsoleApp1
             Console.Write("Введите адрес: ");
             string адрес = Console.ReadLine();
             return new Корпус(название, адрес, Сотрудник(), Организация());
+        }
+        public static Специальность Специальность()
+        {
+            Console.Write("Введите название специальности:");
+            string название = Console.ReadLine();
+            Console.Write("Введите сокращение:");
+            string сокращение = Console.ReadLine();
+            return new Специальность(название, сокращение);
         }
     }
 }
