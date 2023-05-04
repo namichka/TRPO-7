@@ -176,7 +176,38 @@ namespace ConsoleApp1
 
         public static Оборудование Оборудование()
         {
-            return new Оборудование();
+            int стоимость;
+            DateTime дата;
+            ushort год, день, месяц;
+            Console.Write("Введите название оборудования: ");
+            string название = Console.ReadLine();
+            Console.Write("Введите стоимость оборудования: ");
+            if (int.TryParse(Console.ReadLine(), out int q))
+            {
+                стоимость = q;
+            }
+            else
+            {
+                Console.WriteLine("Не пойдет!");
+                return Оборудование();
+            }
+            try
+            {
+                Console.Write("Введите год постановки : ");
+                год = ushort.Parse(Console.ReadLine());
+                Console.Write("Введите месяц постановки : ");
+                месяц = ushort.Parse(Console.ReadLine());
+                Console.Write("Введите день постановки : ");
+                день = ushort.Parse(Console.ReadLine());
+                дата = new DateTime(год, месяц, день);
+                Console.WriteLine(дата.ToString("dd.MM.yyyy"));
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("так дата не пишется!");
+                return Оборудование();
+            }
+            return new Оборудование(название, стоимость, дата);
         }
 
         public static Группа Группа()
