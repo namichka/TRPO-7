@@ -60,11 +60,6 @@ namespace ConsoleApp1
             Console.WriteLine($"Дата рождения студента = {студент.ДатаРождения}");
             Print(студент.Группа);
         }
-        public static void Print(Специальность специальность)
-        {
-            Console.WriteLine($"Название специальности: {специальность.Название}");
-            Console.WriteLine($"Сокращение: {специальность.Сокращение}");
-        }
 
         public static void Print(Смена смена)
         {
@@ -89,7 +84,11 @@ namespace ConsoleApp1
             Print(должность.Подразделение);
 
         }
-
+        public static void Print(Специальность специальность)
+        {
+            Console.WriteLine($"Название специальности:{специальность.Название}");
+            Console.WriteLine($"Сокращение:{специальность.Сокращение}");
+        }
         public static void Print(Подразделение подразделение)
         {
             Console.WriteLine($"Название подразделения: {подразделение.Название}");
