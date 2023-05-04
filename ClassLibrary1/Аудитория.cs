@@ -8,13 +8,19 @@ namespace ClassLibrary1
 {
     public class Аудитория
     {
-        public override string ToString()
+        public string Название { get; }
+        public Сотрудник Сотрудник { get; }
+        public byte КолвоМест { get; }
+        public byte КолвоОкон { get; }
+        public Оборудование Оборудование { get; }
+
+        public Аудитория(string название, Сотрудник сотрудник, byte колвоМест, byte колвоОкон, Оборудование оборудование)
         {
-            return base.ToString();
-        }
-        public static Аудитория Create()
-        {
-            return new Аудитория();
+            Название = название;
+            Сотрудник = сотрудник;
+            КолвоМест = колвоМест;
+            КолвоОкон = колвоОкон;
+            Оборудование = оборудование;
         }
     }
 }

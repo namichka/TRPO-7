@@ -8,13 +8,18 @@ namespace ClassLibrary1
 {
     public class Сотрудник
     {
-        public override string ToString()
+        public string Фамилия { get; }
+        public string Имя { get; }
+        public string Отчество { get; }
+
+        public Должность Должность { get; }
+
+        public Сотрудник(string фамилия, string имя, string отчество, Должность должность) 
         {
-            return base.ToString();
-        }
-        public static Сотрудник Create()
-        {
-            return new Сотрудник();
+            Фамилия = фамилия;
+            Имя = имя;
+            Отчество = отчество;
+            Должность = должность;
         }
     }
 }

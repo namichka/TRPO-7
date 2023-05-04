@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    
-    public class Дисциплина
+    public class ВидЗанятия
     {
         public string Название { get; }
-        public string Сокращение { get; }
-        public Дисциплина(string название, string сокращение)
-        {
+
+        public ВидЗанятия(string название) {
             Название = название;
-            Сокращение = сокращение;
         }
     }
 }

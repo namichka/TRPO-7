@@ -8,21 +8,26 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             while (true)
             {
                 Console.Write("Какой класс Вы хотите создать: ");
                 switch (Console.ReadLine())
                 {
-                    case "Пара": UI.Print(ClassCreator.Para()); break;
-                    case "Подразделение": UI.Print(ClassCreator.Division()); break;
-                    case "Дисциплина": UI.Print(ClassCreator.Discipline()); break;
-                    case "Сотрудник": UI.Print(ClassCreator.Employee()); break;
-                    case "Аудитория": UI.Print(ClassCreator.Auditoria()); break;
-                    case "Занятие": UI.Print(ClassCreator.Lesson()); break;
-                    case "Группа": UI.Print(ClassCreator.Group()); break;
-                    case "Смена": UI.Print(ClassCreator.Smena()); break;
+                    case "Пара": UI.Print(ClassCreator.Пара()); break;
+                    case "Подразделение": UI.Print(ClassCreator.Подразделение()); break;
+                    case "Должность": UI.Print(ClassCreator.Должность()); break;
+                    case "Дисциплина": UI.Print(ClassCreator.Дисциплина()); break;
+                    case "Студент": UI.Print(ClassCreator.Студент());break;
+                    case "Сотрудник": UI.Print(ClassCreator.Сотрудник()); break;
+                    case "Аудитория": UI.Print(ClassCreator.Аудитория()); break;
+                    case "Занятие": UI.Print(ClassCreator.Занятие()); break;
+                    case "Организация": UI.Print(ClassCreator.Организация()); break;
+                    case "Специальность": UI.Print(ClassCreator.Специальность()); break;
+                    case "Группа": UI.Print(ClassCreator.Группа()); break;
+                    case "Смена": UI.Print(ClassCreator.Смена()); break;
+                    case "Вид Занятия": UI.Print(ClassCreator.ВидЗанятия()); break;
                     default: Console.WriteLine("Такой класс не реализован"); break;
                 }
             }

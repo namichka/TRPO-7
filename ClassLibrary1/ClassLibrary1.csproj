@@ -42,20 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class12.cs" />
-    <Compile Include="Division.cs" />
-    <Compile Include="Position.cs" />
-    <Compile Include="Smena.cs" />
-    <Compile Include="Speciality.cs" />
-    <Compile Include="Discipline.cs" />
-    <Compile Include="Lesson.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="Class14.cs" />
-    <Compile Include="Auditoria.cs" />
-    <Compile Include="Group.cs" />
+    <Compile Include="Дисциплина.cs" />
+    <Compile Include="Занятие.cs" />
+    <Compile Include="Должность.cs" />
+    <Compile Include="Корпус.cs" />
+    <Compile Include="Подразделение.cs" />
+    <Compile Include="Организация.cs" />
+    <Compile Include="Сотрудник.cs" />
+    <Compile Include="ВидЗанятия.cs" />
+    <Compile Include="Оборудование.cs" />
+    <Compile Include="Аудитория.cs" />
+    <Compile Include="Специальность.cs" />
+    <Compile Include="Группа.cs" />
+    <Compile Include="Студент.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Para.cs" />
-    <Compile Include="Smena.cs" />
+    <Compile Include="Смена.cs" />
+    <Compile Include="Пара.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

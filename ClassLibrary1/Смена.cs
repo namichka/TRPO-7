@@ -8,23 +8,10 @@ namespace ClassLibrary1
 {
     public class Смена
     {
-        public string НазваниеСмены { get; }
-        public Смена(string названиеСмены)
+        public string Название { get; }
+        public Смена(string название)
         {
-            НазваниеСмены = названиеСмены;
-        }
-
-        public override string ToString()
-        {
-            string s = $"Название смены = {this.НазваниеСмены}";
-            return s;
-        }
-        public static Смена Create()
-        {
-            Console.Write("Укажите название смены: ");
-
-            string названиеСмены = Console.ReadLine();
-            return new Смена(названиеСмены); 
+            Название = название;
         }
     }
 }

@@ -6,15 +6,24 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
+
     public class Группа
     {
-        public override string ToString()
+        public string Название { get; }
+        public string Сокращение { get; }
+        public byte Численность { get; }
+        public ushort ГодПоступления { get; }
+        public Специальность Специальность { get; }
+        public Сотрудник Сотрудник { get; }
+
+        public Группа(string название, string сокращение, byte численность, ushort годПоступления, Специальность специальность, Сотрудник сотрудник)
         {
-            return base.ToString();
-        }
-        public static Группа Create()
-        {
-            return new Группа();
+            Название = название;
+            Сокращение = сокращение;
+            Численность = численность;
+            ГодПоступления = годПоступления;
+            Специальность = специальность;
+            Сотрудник = сотрудник;
         }
     }
 }
