@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Специальность
+    public class Специальность 
     {
         public string Название { get; }
         public string Сокращение { get; }
@@ -17,4 +17,8 @@ namespace ClassLibrary1
             Сокращение = сокращение;
         }
     }
+
+
+
 }
+
