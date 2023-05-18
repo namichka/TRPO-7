@@ -160,18 +160,11 @@ namespace ConsoleApp1
                 return new Организация(название, юридическийАдрес, фактическийАдрес);
         }
 
-        public static ВидЗанятия ВидЗанятия()
-        {
-            Console.Write("Введите вид занятия: ");
-            string ВидЗанятия = Console.ReadLine();
-
-            return new ВидЗанятия(ВидЗанятия);
-        }
-
         public static Оборудование Оборудование()
         {
             return new Оборудование();
         }
+
         public static Группа Группа()
         {
             ushort годПоступления;
@@ -202,6 +195,15 @@ namespace ConsoleApp1
             }
             return new Группа(название, сокращение, численность, годПоступления, Специальность(), Сотрудник());
         }
+
+        public static ВидЗанятия ВидЗанятия()
+        {
+            Console.Write("Введите вид занятия: ");
+            string ВидЗанятия = Console.ReadLine();
+
+            return new ВидЗанятия(ВидЗанятия);
+        }
+
         public static Корпус Корпус()
         {
             Console.Write("Введите название корпуса: ");
