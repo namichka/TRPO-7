@@ -145,6 +145,7 @@ namespace ConsoleApp1
                 return new Подразделение(название, Организация());
         }
 
+
         public static Организация Организация()
         {
             isDa = true;
