@@ -8,6 +8,11 @@ namespace ClassLibrary1
 {
     public class ВидЗанятия
     {
+        public string Название { get; }
 
+        public ВидЗанятия(string название)
+        {
+            Название = название;
+        }
     }
 }
