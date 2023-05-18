@@ -116,23 +116,7 @@ namespace ConsoleApp1
             return new Смена(название);
         }
 
-        public static Должность Должность()
-        {
-            uint оклад;
-            Console.Write("Введите название должности: ");
-            string название = Console.ReadLine();
-            Console.Write("Введите оклад: ");
-            if(uint.TryParse(Console.ReadLine(), out uint result)) 
-            {
-                оклад = result;
-            }
-            else
-            {
-                Console.WriteLine("Миша, давай по новой");
-                return Должность();
-            }
-            return new Должность(название, оклад, Подразделение());
-        }
+       
 
         
 
@@ -149,6 +133,23 @@ namespace ConsoleApp1
              return new Организация(название, юридическийАдрес, фактическийАдрес, Сотрудник());
           else
                 return new Организация(название, юридическийАдрес, фактическийАдрес);
+        }
+        public static Должность Должность()
+        {
+            uint оклад;
+            Console.Write("Введите название должности: ");
+            string название = Console.ReadLine();
+            Console.Write("Введите оклад: ");
+            if (uint.TryParse(Console.ReadLine(), out uint result))
+            {
+                оклад = result;
+            }
+            else
+            {
+                Console.WriteLine("Миша, давай по новой");
+                return Должность();
+            }
+            return new Должность(название, оклад, Подразделение());
         }
 
         public static ВидЗанятия ВидЗанятия()
