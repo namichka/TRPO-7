@@ -68,7 +68,13 @@ namespace ConsoleApp1
 
         public static void Print(Сотрудник сотрудник)
         {
-            
+            if (сотрудник != null)
+            {
+                Console.WriteLine($"Фамилия сотрудника: {сотрудник.Фамилия}");
+                Console.WriteLine($"Имя сотрудника: {сотрудник.Имя}");
+                Console.WriteLine($"Отчество сотрудника: {сотрудник.Отчество}");
+                Print(сотрудник.Должность);
+            }
         }
         public static void Print(Подразделение подразделение)
         {
