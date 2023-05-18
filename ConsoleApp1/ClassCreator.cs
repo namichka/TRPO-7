@@ -98,14 +98,7 @@ namespace ConsoleApp1
         static bool isDa = false;
         public static Сотрудник Сотрудник()
         {
-            isDa = true;
-            Console.Write("Введите фамилию сотрудника: ");
-            string фамилия = Console.ReadLine();
-            Console.Write("Введите имя сотрудника: ");
-            string имя = Console.ReadLine();
-            Console.Write("Введите отчество : ");
-            string отчество = Console.ReadLine();
-            return new Сотрудник(фамилия, имя, отчество, Должность());
+            
         }
 
 
