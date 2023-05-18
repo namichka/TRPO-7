@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
+
+
     public class Подразделение
     {
         public string Название { get; }
         public Сотрудник Сотрудник { get; }
-        public Организация Организация { get; }        
+        public Организация Организация { get; }
 
         public Подразделение(string название, Сотрудник сотрудник, Организация организация)
         {
@@ -24,4 +26,5 @@ namespace ClassLibrary1
             Организация = организация;
         }
     }
+
 }
