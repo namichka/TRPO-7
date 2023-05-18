@@ -109,7 +109,7 @@ namespace ConsoleApp1
 
         public static void Print(ВидЗанятия видЗанятия)
         {
-
+            Console.WriteLine($"Вид занятия: {видЗанятия.Название}");
         }
 
         public static void Print(Оборудование оборудование)

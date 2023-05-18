@@ -51,7 +51,6 @@ namespace ConsoleApp1
             return new Аудитория(название, Сотрудник(), колвоМест, колвоОкон, Оборудование());
         }
 
-
         public static Дисциплина Дисциплина()
         {
             Console.Write("Введите дисциплину: ");
@@ -163,7 +162,10 @@ namespace ConsoleApp1
 
         public static ВидЗанятия ВидЗанятия()
         {
-            return new ВидЗанятия();
+            Console.Write("Введите вид занятия: ");
+            string ВидЗанятия = Console.ReadLine();
+
+            return new ВидЗанятия(ВидЗанятия);
         }
 
         public static Оборудование Оборудование()
