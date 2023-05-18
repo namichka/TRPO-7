@@ -76,6 +76,12 @@ namespace ConsoleApp1
                 Print(сотрудник.Должность);
             }
         }
+        public static void Print(Подразделение подразделение)
+        {
+            Console.WriteLine($"Название подразделения: {подразделение.Название}");
+            Print(подразделение.Сотрудник);
+            Print(подразделение.Организация);
+        }
 
         public static void Print(Должность должность)
         {
@@ -89,12 +95,7 @@ namespace ConsoleApp1
             Console.WriteLine($"Название специальности:{специальность.Название}");
             Console.WriteLine($"Сокращение:{специальность.Сокращение}");
         }
-        public static void Print(Подразделение подразделение)
-        {
-            Console.WriteLine($"Название подразделения: {подразделение.Название}");
-            Print(подразделение.Сотрудник);
-            Print(подразделение.Организация);
-        }
+        
 
         public static void Print(Организация организация)
         {

@@ -134,17 +134,7 @@ namespace ConsoleApp1
             return new Должность(название, оклад, Подразделение());
         }
 
-        public static Подразделение Подразделение()
-        {
-
-            Console.Write("Введите название подразделения: ");
-            string название = Console.ReadLine();
-
-            if (!isDa)
-                return new Подразделение(название, Сотрудник(), Организация());
-            else
-                return new Подразделение(название, Организация());
-        }
+        
 
         public static Организация Организация()
         {
@@ -169,6 +159,17 @@ namespace ConsoleApp1
         public static Оборудование Оборудование()
         {
             return new Оборудование();
+        }
+        public static Подразделение Подразделение()
+        {
+
+            Console.Write("Введите название подразделения: ");
+            string название = Console.ReadLine();
+
+            if (!isDa)
+                return new Подразделение(название, Сотрудник(), Организация());
+            else
+                return new Подразделение(название, Организация());
         }
         public static Группа Группа()
         {
