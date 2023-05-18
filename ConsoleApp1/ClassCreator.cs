@@ -196,14 +196,6 @@ namespace ConsoleApp1
             return new Группа(название, сокращение, численность, годПоступления, Специальность(), Сотрудник());
         }
 
-        public static ВидЗанятия ВидЗанятия()
-        {
-            Console.Write("Введите вид занятия: ");
-            string ВидЗанятия = Console.ReadLine();
-
-            return new ВидЗанятия(ВидЗанятия);
-        }
-
         public static Корпус Корпус()
         {
             Console.Write("Введите название корпуса: ");
@@ -219,6 +211,14 @@ namespace ConsoleApp1
             Console.Write("Введите сокращение:");
             string сокращение = Console.ReadLine();
             return new Специальность(название, сокращение);
+        }
+
+        public static ВидЗанятия ВидЗанятия()
+        {
+            Console.Write("Введите вид занятия: ");
+            string ВидЗанятия = Console.ReadLine();
+
+            return new ВидЗанятия(ВидЗанятия);
         }
     }
 }
