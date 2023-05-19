@@ -34,7 +34,21 @@ namespace ConsoleApp1
 
         public static Аудитория Аудитория()
         {
-            
+            byte колвоМест = 0;
+            byte колвоОкон = 0;
+            Console.Write("Введите название аудитории: ");
+            string название = Console.ReadLine();
+            Console.Write("Введите количество мест: ");
+            if (byte.TryParse(Console.ReadLine(), out byte result1))
+            {
+                колвоМест = result1;
+            }
+            Console.Write("Введите количество окон: ");
+            if (byte.TryParse(Console.ReadLine(), out byte result2))
+            {
+                колвоОкон = result2;
+            }
+            return new Аудитория(название, Сотрудник(), колвоМест, колвоОкон, Оборудование());
         }
 
 

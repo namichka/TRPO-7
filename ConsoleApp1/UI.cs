@@ -29,7 +29,11 @@ namespace ConsoleApp1
         }
         public static void Print(Аудитория аудитория)
         {
-            
+            Console.WriteLine($"Название аудитория = {аудитория.Название}");
+            Print(аудитория.Сотрудник);
+            Console.WriteLine($"Количество мест = {аудитория.КолвоМест}");
+            Console.WriteLine($"Количество окон = {аудитория.КолвоОкон}");
+            Print(аудитория.Оборудование);
         }
 
         public static void Print(Дисциплина дисциплина)
