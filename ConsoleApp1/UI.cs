@@ -56,11 +56,6 @@ namespace ConsoleApp1
             Console.WriteLine($"Дата рождения студента = {студент.ДатаРождения}");
             Print(студент.Группа);
         }
-        public static void Print(Специальность специальность)
-        {
-            Console.WriteLine($"Название специальности: {специальность.Название}");
-            Console.WriteLine($"Сокращение: {специальность.Сокращение}");
-        }
 
         public static void Print(Смена смена)
         {
@@ -69,22 +64,33 @@ namespace ConsoleApp1
 
         public static void Print(Сотрудник сотрудник)
         {
-            
+            if (сотрудник != null)
+            {
+                Console.WriteLine($"Фамилия сотрудника: {сотрудник.Фамилия}");
+                Console.WriteLine($"Имя сотрудника: {сотрудник.Имя}");
+                Console.WriteLine($"Отчество сотрудника: {сотрудник.Отчество}");
+                Print(сотрудник.Должность);
+            }
+        }
+        public static void Print(Подразделение подразделение)
+        {
+            Console.WriteLine($"Название подразделения: {подразделение.Название}");
+            Print(подразделение.Сотрудник);
+            Print(подразделение.Организация);
         }
 
+        
+        public static void Print(Специальность специальность)
+        {
+            Console.WriteLine($"Название специальности:{специальность.Название}");
+            Console.WriteLine($"Сокращение:{специальность.Сокращение}");
+        }
         public static void Print(Должность должность)
         {
             Console.WriteLine($"Должность: {должность.Название}");
             Console.WriteLine($"Оклад: {должность.Оклад}");
             Print(должность.Подразделение);
 
-        }
-
-        public static void Print(Подразделение подразделение)
-        {
-            Console.WriteLine($"Название подразделения: {подразделение.Название}");
-            Print(подразделение.Сотрудник);
-            Print(подразделение.Организация);
         }
 
         public static void Print(Организация организация)
@@ -94,18 +100,25 @@ namespace ConsoleApp1
                 Console.WriteLine($"Название организации = {организация.Название}");
                 Console.WriteLine($"Юридический адрес = {организация.ЮридическийАдрес}");
                 Console.WriteLine($"Фактический адрес = {организация.ФактическийАдрес}");
-                Print(организация.Сотрудник);
+                Print(организация.Руководитель);
             }
         }
 
         public static void Print(ВидЗанятия видЗанятия)
         {
-
+            Console.WriteLine($"Вид занятия = {видЗанятия.Название}");
         }
 
         public static void Print(Оборудование оборудование)
         {
 
+        }
+        public static void Print(Корпус корпус)
+        {
+            Console.WriteLine($"Название корпуса: {корпус.Название}");
+            Console.WriteLine($"Адрес корпуса: {корпус.Адрес}");
+            Print(корпус.Сотрудник);
+            Print(корпус.Организация);
         }
     }
 }

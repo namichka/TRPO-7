@@ -14,21 +14,22 @@ namespace ConsoleApp1
         public static Пара Пара()
         {
             Console.Write("Укажите время начала пары: ");
-            string началоПары = Console.ReadLine();
+            TimeSpan началоПары = TimeSpan.Parse(Console.ReadLine());
             Console.Write("Укажите время окончания пары: ");
-            string конецПары = Console.ReadLine();
+            TimeSpan конецПары = TimeSpan.Parse(Console.ReadLine());
             Console.Write("Укажите время начала перерыва: ");
-            string началоПерерыва = Console.ReadLine();
+            TimeSpan началоПерерыва = TimeSpan.Parse(Console.ReadLine());
             Console.Write("Укажите время окончания перерыва: ");
-            string конецПерерыва = Console.ReadLine();
+            TimeSpan конецПерерыва = TimeSpan.Parse(Console.ReadLine());
             return new Пара(началоПары, конецПары, началоПерерыва, конецПерерыва, Смена());
         }
         public static Занятие Занятие()
         {
             Console.Write("Введите дату проведения: ");
-            string дата = Console.ReadLine();
-            return new Занятие(дата, Дисциплина(), Сотрудник(), Аудитория(), Группа(), Пара(), ВидЗанятия());
-
+            if (DateTime.TryParse(Console.ReadLine(), out DateTime дата))
+                return new Занятие(дата, Дисциплина(), Сотрудник(), Аудитория(), Группа(), Пара(), ВидЗанятия());
+            else
+                return new Занятие(Дисциплина(), Сотрудник(), Аудитория(), Группа(), Пара(), ВидЗанятия());
         }
 
         public static Аудитория Аудитория()
@@ -83,15 +84,14 @@ namespace ConsoleApp1
         static bool isDa = false;
         public static Сотрудник Сотрудник()
         {
-            
-        }
-        public static Специальность Специальность()
-        {
-            Console.WriteLine("Введите название специальности");
-            string название = Console.ReadLine();
-            Console.WriteLine("Введите сокращение");
-            string сокращение = Console.ReadLine();
-            return new Специальность(название, сокращение);
+            isDa = true;
+            Console.Write("Введите фамилию сотрудника: ");
+            string фамилия = Console.ReadLine();
+            Console.Write("Введите имя сотрудника: ");
+            string имя = Console.ReadLine();
+            Console.Write("Введите отчество : ");
+            string отчество = Console.ReadLine();
+            return new Сотрудник(фамилия, имя, отчество, Должность());
         }
 
 
@@ -102,35 +102,9 @@ namespace ConsoleApp1
             return new Смена(название);
         }
 
-        public static Должность Должность()
-        {
-            uint оклад;
-            Console.Write("Введите название должности: ");
-            string название = Console.ReadLine();
-            Console.Write("Введите оклад: ");
-            if(uint.TryParse(Console.ReadLine(), out uint result)) 
-            {
-                оклад = result;
-            }
-            else
-            {
-                Console.WriteLine("Миша, давай по новой");
-                return Должность();
-            }
-            return new Должность(название, оклад, Подразделение());
-        }
+       
 
-        public static Подразделение Подразделение()
-        {
-
-            Console.Write("Введите название подразделения: ");
-            string название = Console.ReadLine();
-
-            if (!isDa)
-                return new Подразделение(название, Сотрудник(), Организация());
-            else
-                return new Подразделение(название, Организация());
-        }
+        
 
         public static Организация Организация()
         {
@@ -146,17 +120,47 @@ namespace ConsoleApp1
           else
                 return new Организация(название, юридическийАдрес, фактическийАдрес);
         }
+        public static Должность Должность()
+        {
+            uint оклад;
+            Console.Write("Введите название должности: ");
+            string название = Console.ReadLine();
+            Console.Write("Введите оклад: ");
+            if (uint.TryParse(Console.ReadLine(), out uint result))
+            {
+                оклад = result;
+            }
+            else
+            {
+                Console.WriteLine("Миша, давай по новой");
+                return Должность();
+            }
+            return new Должность(название, оклад, Подразделение());
+        }
 
         public static ВидЗанятия ВидЗанятия()
         {
-            return new ВидЗанятия();
+            Console.Write("Введите вид занятия: ");
+            string ВидЗанятия = Console.ReadLine();
+
+            return new ВидЗанятия(ВидЗанятия);
         }
 
         public static Оборудование Оборудование()
         {
             return new Оборудование();
         }
+        public static Подразделение Подразделение()
+        {
 
+            Console.Write("Введите название подразделения: ");
+            string название = Console.ReadLine();
+
+            if (!isDa)
+                return new Подразделение(название, Сотрудник(), Организация());
+            else
+                return new Подразделение(название, Организация());
+        }
         public static Группа Группа()
         {
             ushort годПоступления;
@@ -189,7 +193,19 @@ namespace ConsoleApp1
         }
         public static Корпус Корпус()
         {
-            return new Корпус();
+            Console.Write("Введите название корпуса: ");
+            string название = Console.ReadLine();
+            Console.Write("Введите адрес: ");
+            string адрес = Console.ReadLine();
+            return new Корпус(название, адрес, Сотрудник(), Организация());
+        }
+        public static Специальность Специальность()
+        {
+            Console.Write("Введите название специальности:");
+            string название = Console.ReadLine();
+            Console.Write("Введите сокращение:");
+            string сокращение = Console.ReadLine();
+            return new Специальность(название, сокращение);
         }
     }
 }
